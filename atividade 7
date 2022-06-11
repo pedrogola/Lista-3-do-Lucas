@@ -1,0 +1,25 @@
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<string> numbers = new Stack<string>();
+            numbers.Push("Prato 1");
+            numbers.Push("Prato 2");
+            numbers.Push("Prato 3");
+            numbers.Push("Prato 4");
+            numbers.Push("Prato 5");
+
+            numbers.Pop();
+            numbers.Pop();
+
+            numbers.Push("Prato 6");
+
+            foreach (string pilhas in numbers)
+            {
+                Console.WriteLine(pilhas);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
