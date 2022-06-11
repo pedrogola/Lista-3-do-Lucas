@@ -1,0 +1,81 @@
+internal class Program
+    {
+       static string adiciona;
+        static void Main(string[] args)
+        {
+            int menu = -1;
+            List<string> list = new List<string>();
+            while (menu != 0)
+            {
+                Console.WriteLine("1 - Adicionar usuario");
+                Console.WriteLine("2 - Remover usuario");
+                Console.WriteLine("3 - Substituir usuario");
+                Console.WriteLine("4 - Limpar a lista");
+                Console.WriteLine("5 - Ver a lista");
+                Console.WriteLine("0 - Para fechar");
+                Console.WriteLine("---------------------------");
+                menu = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                switch (menu)
+                {
+                    case 1:
+                        Console.WriteLine("Adicione um Usuário");
+                        adiciona = Console.ReadLine();
+                        list.Add(adiciona);
+                        Console.Clear();
+
+                        break;
+
+                    case 2:
+                        list.RemoveAt(0);
+                        break;
+
+                    case 3:
+                        Console.Write("insira aqui o nome a ser retirado: ");
+                        string valorprocurado = Console.ReadLine();
+                        bool valorExiste;
+
+                        valorExiste = list.Contains(valorprocurado);
+                        if (valorExiste)
+                        {
+                            Console.WriteLine("Insira aqui o nome novo a ser inserido: ");
+                            string substitui = Console.ReadLine();
+
+                            if(substitui != adiciona)
+                            {
+                                list.Remove(valorprocurado);
+                                list.Add(adiciona = substitui);
+                            }
+                        }
+
+                        break;
+
+                    case 4:
+                        Console.Clear();
+                        list.Clear();
+                        Console.WriteLine("a lista foi limpa");
+
+                        break;
+
+                    case 5:
+                        foreach (string ver in list)
+                        {
+                            if (list.Count == 0)
+                            {
+                                Console.WriteLine("A lista está vazia");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Usuário: " + ver);
+
+                            }
+                            
+                        }
+                        break;
+                }
+
+
+                }
+            Console.ReadKey(); }
+    }
+}
