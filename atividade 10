@@ -1,0 +1,92 @@
+namespace questao_10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string troca;
+
+            
+
+            Queue<int> fila1 = new Queue<int>(4);
+            Queue<int> fila2 = new Queue<int>(4);
+
+            Console.WriteLine("insira aqui um numero");
+            int numero1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero4 = Convert.ToInt32(Console.ReadLine());
+
+            fila1.Enqueue(numero1);
+            fila1.Enqueue(numero2);
+            fila1.Enqueue(numero3);
+            fila1.Enqueue(numero4);
+            //---------------------------------------------------------------------------
+
+
+            Console.WriteLine("insira aqui um numero");
+            int numero6 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero7 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero8 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("insira aqui um numero");
+            int numero9 = Convert.ToInt32(Console.ReadLine());
+
+            fila2.Enqueue(numero6);
+            fila2.Enqueue(numero7);
+            fila2.Enqueue(numero8);
+            fila2.Enqueue(numero9);
+            //-----------------------------------------------------
+
+            Console.WriteLine("se deseja trocar escreva 0, se não, escreva qualquer coisa");
+            troca = Console.ReadLine();
+
+
+            if (troca == "0")
+            {
+                
+                Console.Clear();
+                fila1.Enqueue(numero6);
+                fila1.Enqueue(numero7);
+                fila1.Enqueue(numero8);
+                fila1.Enqueue(numero9);
+
+                fila2.Enqueue(numero1);
+                fila2.Enqueue(numero2);
+                fila2.Enqueue(numero3);
+                fila2.Enqueue(numero4);
+
+                
+            }
+           
+
+
+            foreach (int fila in fila1)
+            {
+                Console.WriteLine(fila);
+            }
+            foreach (int fila10 in fila2)
+            {
+                Console.WriteLine(fila10);
+
+
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+    /*Crie um programa que tenha 2 filas. Insira 4 números inteiros na fila 1 e 4 números
+inteiros na fila 2. Além disso, seu programa deverá permitir trocar todos os elementos da fila 1 para a
+fila 2 e os elemntos da fila 2 para a fila 1.*/
+}
