@@ -1,0 +1,27 @@
+ internal class Program
+    { /*Crie um programa que carregue uma fila com os itens: {“Pessoa1”, “Pessoa2”,
+“Pessoa3”, “Pessoa4”, “Pessoa5”}. Apresente os resultados da fila após a remoção de 2 pessoa e
+inclusão da “Pessoa6”.*/
+        static void Main(string[] args)
+        {
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("pessoa1");
+            queue.Enqueue("pessoa2");
+            queue.Enqueue("pessoa3");
+            queue.Enqueue("pessoa4");
+            queue.Enqueue("pessoa5");
+
+            queue.Dequeue();
+            queue.Dequeue();
+
+            queue.Enqueue("pessoa6");
+
+            foreach (string pessoas in queue)
+            {
+                Console.WriteLine(pessoas);
+            }
+            Console.ReadKey();
+
+
+        }
+    }
