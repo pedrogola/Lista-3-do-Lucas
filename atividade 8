@@ -1,0 +1,30 @@
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<string> pa = new Stack<string>();
+
+            pa.Push("[_______3________]");
+            pa.Push("  [_____2_____]");
+            pa.Push("     [__1__]");
+
+            foreach (string pilha in pa)
+            {
+                Console.WriteLine("PA" + pilha);
+            }
+            Stack<string> pb = new Stack<string>();
+            Console.WriteLine("\n___________________________\n");
+            pb.Push("[_______3________]");
+            pb.Push("  [_____2_____]");
+            pb.Push("     [__1__]");
+
+            foreach (string pilha in pb)
+            {
+                Console.WriteLine("PB" + pilha);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
