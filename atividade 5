@@ -1,0 +1,35 @@
+namespace primeira_lista
+{ 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //definindo o tipo da lista
+            List<string> lista = new List<string>();
+
+            //adicionando conteudo a lista
+            lista.Add("branco");
+            lista.Add("Vermelho");
+            lista.Add("Amarelo");
+            lista.Add("Azul");
+            lista.Add("Rosa");
+            //removendo conteudo da lista
+            lista.RemoveAt(0);
+            lista.RemoveAt(0);
+            lista.RemoveAt(0);
+            //adicionando denovo
+            lista.Add("branco");
+            lista.Add("Vermelho");
+            lista.Add("Amarelo");
+
+            foreach (string cores in lista)
+            {
+                Console.WriteLine(cores);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+/*Crie um programa que permita carregar uma lista com os itens: {“Branco”, “Vermelho”,
+“Amarelo”, “Azul”, “Rosa”}. Posteriormente, remova os três primeiros itens da lista e insira-os no final
+da lista. Imprima o resultado.*/
